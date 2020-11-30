@@ -1,0 +1,32 @@
+<app-layout>
+  <mat-card class="c-card">
+    <h1>Register</h1>
+
+    <form novalidate [formGroup]="form">
+      <app-email-password-inputs [formGroup]="form"></app-email-password-inputs>
+
+      <mat-form-field>
+        <input type="text"
+               matInput
+               placeholder="Name"
+               formControlName="name">
+        <mat-error>Name is required.</mat-error>
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button
+            color="primary"
+            class="c-cta"
+            [disabled]="isLoading || !form.valid"
+            (click)="onRegister()">Register
+    </button>
+
+    <p>Already have an account?</p>
+
+    <button mat-raised-button
+            color="secondary"
+            class="c-cta"
+            (click)="onRegister()">Login
+    </button>
+  </mat-card>
+</app-layout>

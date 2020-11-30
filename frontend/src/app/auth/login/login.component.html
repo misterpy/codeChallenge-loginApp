@@ -1,0 +1,26 @@
+<app-layout>
+  <mat-card class="c-card">
+    <h1>Login</h1>
+
+    <form novalidate [formGroup]="form" class="c-form">
+      <app-email-password-inputs [formGroup]="form"></app-email-password-inputs>
+    </form>
+
+    <button mat-raised-button
+            color="primary"
+            class="c-cta"
+            [disabled]="!form.valid || isLoading"
+            (click)="onLogin()">
+      Login
+    </button>
+
+    <p>No account yet?</p>
+
+    <button mat-raised-button
+            color="secondary"
+            class="c-cta"
+            routerLink="../register">
+      Register an account
+    </button>
+  </mat-card>
+</app-layout>

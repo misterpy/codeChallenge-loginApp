@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.c-card {
+  width: 380px;
+}
+
+.c-cta {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.c-card, .c-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-form {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
