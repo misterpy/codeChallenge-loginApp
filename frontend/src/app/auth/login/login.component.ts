@@ -59,8 +59,7 @@ export class LoginComponent implements OnDestroy {
         takeUntil(this.destroyed$),
       )
       .subscribe(res => {
-        console.log('login result >>>', res);
-        // this.router.navigate(['/auth', 'profile']);
+        this.router.navigate(['/auth', 'profile']);
       });
   }
 
